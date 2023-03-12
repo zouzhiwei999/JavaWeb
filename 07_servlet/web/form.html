@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请求表单</title>
+    <style type="text/css">
+        #a{
+            margin-top: 100px;
+        }
+        li{
+
+        }
+    </style>
+</head>
+<body>
+    <div align="center" id="a">
+        <form action="http://localhost/07_servlet/parameterServlet" method="post">
+            账号<input  type="text" name="name"> <br>
+            密码<input  type="password" name="password"> <br>
+            兴趣:
+
+                java<input type="checkbox" name="hobby" value="java">
+                c++<input type="checkbox" name="hobby" value="c++">
+                php<input type="checkbox" name="hobby" value="php"> <br>
+            web <br>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>
