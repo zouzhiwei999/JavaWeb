@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>当按钮被点击时提交</title>
+    <script type="text/javascript">
+        function f() {
+            alert('静态onclick事件');
+        };
+
+        window.onload = function () {
+            var elementById = document.getElementById(`btn2`);
+
+            elementById.onclick = function () {
+                alert('动态onclick事件');
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+<!--静态加载-->
+    <button id="btn1" onclick="f()">按钮一</button>
+
+    <button id="btn2">按钮二</button>
+
+</body>
+</html>

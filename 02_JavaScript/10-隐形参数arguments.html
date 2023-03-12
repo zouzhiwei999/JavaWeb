@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        function f1() {
+            alert(arguments);
+            alert(arguments.length);
+            alert(arguments[0]);
+            alert(arguments[1]);
+            alert(arguments[2]);
+            alert("你妹的");
+        }
+
+        // f1(1,"sa","s");
+
+        /*计算*/
+        function f2(num,num){
+            var result = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                if (typeof (arguments[i]) == "number") {
+                    result += arguments[i];
+                }
+            }
+            return result;
+        }
+
+        alert(f2(1,2,"abc",45));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

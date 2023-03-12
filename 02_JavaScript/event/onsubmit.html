@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onsubmit事件</title>
+    <script type="text/javascript">
+        function onchangeFun() {
+            var name = document.getElementById("name");
+            var passwd = document.getElementById("passwd");
+
+            if (name.value.length < 2){
+                alert('账号长度不够');
+                return false;
+            }
+        }
+
+        window.onload = function () {
+            var f = document.getElementById("form01");
+            f.onsubmit = function () {
+                return false;
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <form action="http://www.baidu.com" method="get" onchange="return onchangeFun();">
+        账号<input id="name" type="text" name="name"><br>
+        密码<input id="passwd" type="password">
+
+        <input type="submit" value="提交">
+    </form>
+
+    <form id="form1" action="http://www.baidu.com" method="get">
+        账号<input id="name01" type="text" name="name"><br>
+        密码<input id="passwd01" type="password">
+
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+</html>

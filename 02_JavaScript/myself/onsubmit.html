@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>表单提交时间</title>
+    <script type="text/javascript">
+        function onsubmitFun() {
+            alert("提交表单")
+            return false;
+        }
+
+        window.onload = function (){
+            var elementById = document.getElementById("form01");
+            var name = document.getElementById("name01");
+            var passwd = document.getElementById("passwd01");
+
+            elementById.onsubmit = function () {
+                if (name.value.length < 2) {
+                    alert("账号太短");
+                    return false;
+                }
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<form action="http://8080" method="get" onsubmit="return onsubmitFun()">
+
+    账号<input id="name" type="text" name="name"><br>
+    密码<input id="passwd" type="password">
+
+    <button type="submit">提交</button>
+</form>
+
+<br>
+
+<form action="http://www.baidu.com" method="get" id="form01">
+
+    账号<input id="name01" type="text" name="name"><br>
+    密码<input id="passwd01" type="password" name="passwd">
+
+    <button type="submit">提交</button>
+</form>
+
+</body>
+</html>

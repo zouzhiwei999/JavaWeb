@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        var f1 = function () {
+            alert("This is a parameterless function");
+        };
+
+        var f2 = function f2(a, b) {
+            alert("This is a parametric function. a=>" + a + ",b=>" + b);
+        };
+
+        var f3 = function f3(a, b) {
+            alert("This is a function with return value.");
+            return a+b;
+        };
+
+        f1();
+        f2(11,11);
+        var f = f3(1,2);
+        alert("f3结果" + f);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

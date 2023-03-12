@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>失去焦点</title>
+    <script type="text/javascript">
+        function onblurFun() {
+            alert("静态加载，失去焦点");
+        }
+
+        window.onload = function () {
+            var elementById = document.getElementById("pwd");
+            elementById.onblur = function () {
+                alert("动态加载，失去焦点");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<form>
+    账号: <input type="text" onblur="onblurFun()"/> <br>
+    密码: <input type="password" id="pwd">
+</form>
+
+</body>
+</html>

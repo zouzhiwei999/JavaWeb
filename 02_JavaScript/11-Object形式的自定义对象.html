@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var obj = new Object()
+        obj.name = "刘德华";
+        obj.age = 18;
+        obj.fun = function () {
+            alert(this.name + "," + this.age);
+        }
+
+        // obj.fun();
+
+        var obj = new Object()
+        obj.name = undefined;
+        obj.age = undefined;
+        obj.fun = function (name,age) {
+            this.name = name;
+            this.age = age;
+            alert(this.name + "," + this.age);
+        }
+
+        obj.fun("张学友",19);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

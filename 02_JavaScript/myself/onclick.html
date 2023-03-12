@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>单击事件</title>
+    <script type="text/javascript">
+        //静态加载
+        function onclickFun() {
+            alert("静态加载");
+        }
+
+        window.onload = function () {
+            var btn02 = document.getElementById("btn02");
+            btn02.onclick = function () {
+                alert("动态加载");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<button type="button" id="btn01" onclick="onclickFun()">静态加载</button>
+<button type="button" id="btn02">动态加载</button>
+
+</body>
+</html>

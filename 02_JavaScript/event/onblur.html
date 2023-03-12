@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>失去焦点</title>
+    <!--静态失去焦点-->
+    <script type="text/javascript">
+        function f() {
+            console.log('静态失去焦点');
+        }
+
+        window.onload = function () {
+            var elementById = document.getElementById(`pw`);
+
+            elementById.onblur = function () {
+                console.log("动态失去焦点");
+            }
+        }
+    </script>
+</head>
+<body>
+账号 <input onblur="f()" type="text"> <br>
+密码 <input id="pw" type="password">
+
+</body>
+</html>

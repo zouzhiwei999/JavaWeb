@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>校验密码是否正确</title>
+    <script type="text/javascript">
+        function onclickFun() {
+            var name = document.getElementById("name");
+            var passwd = document.getElementById("passwd");
+            var s = document.getElementById("s");
+
+            var patt = /^\w{3,5}$/;
+            if (patt.test(name.value) == true){
+                s.innerHTML = "<img src=\"tempsnip.png\" width=\"25\" height=\"25\">"
+            }
+            if (patt.test(passwd.value) == false){
+                s.innerHTML = "<img src=\"fish.jpg\" width=\"25\" height=\"25\">"
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <form>
+        <table align="centere">
+            <tr>
+                <td>账号:</td>
+                <td><input id="name" type="text">
+                    <span id="s">
+
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input id="passwd" type="password"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button"  onclick="onclickFun()" value="校验">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

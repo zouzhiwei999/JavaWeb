@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // 现在需要我们使用 js 代码来创建 html 标签，并显示在页面上
+        // 标签的内容就是：<div>国哥，我爱你</div>
+        window.onload = function () {
+            var htmlDivElement = document.createElement("div");
+            var text = document.createTextNode("国哥，我爱你");
+            htmlDivElement.appendChild(text);
+            // htmlDivElement.innerText = "国哥，我爱你";
+            document.body.appendChild(htmlDivElement);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

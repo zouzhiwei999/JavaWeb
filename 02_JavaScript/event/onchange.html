@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onchange事件</title>
+    <script type="text/javascript">
+        function onchangeFun() {
+            alert('静态onchange');
+        }
+
+        window.onload = function () {
+            var e = document.getElementById("sel02")
+            e.onchange = function () {
+                alert('动态改变');
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <select id="sel01" onchange="onchangeFun()">
+        <option>葫芦娃</option>
+        <option>天线宝宝</option>
+        <option>鲁班七号</option>
+    </select>
+
+    <select id="sel02">
+        <option>葫芦娃</option>
+        <option>天线宝宝</option>
+        <option>鲁班七号</option>
+    </select>
+
+</body>
+</html>

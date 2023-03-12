@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function f(a) {
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+            console.log(arguments[2]);
+
+            console.log(arguments.length);
+
+            console.log("a =" + a);
+
+            for (var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+
+            console.log("无参函数()");
+        }
+
+        // f(1, "abc", 45);
+
+        function sum(a) {
+            var result = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                if (typeof(arguments[i]) == "number") {
+                    result += arguments[i];
+                }
+            }
+            return result;
+        }
+
+        var sum1 = sum(11,11,"abc",12,2);
+
+        console.log(sum1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的第二种定义方法</title>
+    <script type="text/javascript">
+        var f = function () {
+            alert("无参函数");
+        }
+
+        // f();
+        
+        var f1 = function (a,b) {
+            alert("有参函数"+a + ","+b);
+        }
+        
+        // f1(10,5);
+
+        var f2 = function (a, b) {
+            var result = a+b;
+            return result;
+        }
+
+        alert(f2(10,5));
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

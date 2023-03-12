@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+
+
+        $(function () {
+            // alert( $("div").html() );
+
+            // $("div").html("<h1>这是在html()里面设置的标题 </h1>");
+
+            // alert( $("div").text());
+
+            // $("div").text("我是text()方法设置的方法");
+
+            $("#btn").click(function () {
+
+                // alert($("#username").val());
+                $("#username").val("打你小鸡鸡");
+            })
+
+
+        })
+
+    </script>
+</head>
+<body>
+    <div>
+        我是div里面的文字
+        <span>
+            我是span里面的
+        </span>
+    </div>
+    <input type="text" name="username" id="username" />
+    <button id="btn">按钮</button>
+
+</body>
+</html>

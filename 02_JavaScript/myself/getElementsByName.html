@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementsByName</title>
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+            var btn01 = document.getElementById("btn01");
+            btn01.onclick = function () {
+                alert("获取了btn01");
+                var elementsByName = document.getElementsByName("hobby");
+                //全选
+                for (var i = 0; i < elementsByName.length; i++) {
+                    elementsByName[i].checked = true;
+                }
+            }
+
+            var btn02 = document.getElementById("btn02");
+            btn02.onclick = function () {
+                var elementsByName = document.getElementsByName("hobby");
+                //全不选
+                for (var i = 0; i < elementsByName.length; i++) {
+                    elementsByName[i].checked = false;
+                }
+            }
+
+
+            var btn03 = document.getElementById("btn03");
+            btn03.onclick = function () {
+                var elementsByName = document.getElementsByName("hobby");
+                //反选
+                for (var i = 0; i < elementsByName.length; i++) {
+                    elementsByName[i].checked = !elementsByName[i].checked;
+                }
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+<input type="checkbox" name="hobby" checked="checked">java
+<input type="checkbox" name="hobby">php
+<input type="checkbox" name="hobby">html
+
+<br/>
+
+<button id="btn01">全选</button>
+<button id="btn02">全不选</button>
+<button id="btn03">反选</button>
+
+
+</body>
+</html>

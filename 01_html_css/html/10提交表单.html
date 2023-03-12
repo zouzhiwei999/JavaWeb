@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="http://www.baidu.com" method="get">
+        <input type="hidden" name="属性" value="值">
+    <h1 align="center">提交信息</h1>
+        <table align="center">
+            <tr>
+                <td>用户名:</td>
+                <td><input name="用户名" type="text" value="请输入您的名字"> <br></td>
+            </tr>
+            <tr>
+                <td>   用户密码:</td>
+                <td><input name="用户密码" type="password" value="123"> <br></td>
+            </tr>
+            <tr>
+                <td>确认密码:</td>
+                <td><input name="确认用户密码" type="password"> <br></td>
+            </tr>
+            <tr>
+                <td>选择性别 <br></td>
+                <td><input type="radio" name="性别" checked="checked" value="男">男 <input type="radio" name="性别" value="女">女 </td>
+            </tr>
+            <tr>
+                <td>选择爱好 </td>
+                <td><input type="checkbox" name="爱好" checked="checked" value="java">java
+                    <input type="checkbox" name="爱好" value="php">php<br>
+                </td>
+            </tr>
+            <tr>
+                <td>选择国家 </td>
+                <td>
+                    <select name="国家">
+                    <option selected="selected" value="中国">中国</option>
+                    <option value="中">美国</option>
+                    <option value="英国">英国</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>自我评级 </td>
+                <td><textarea name="自我评级" cols="10" rows="3">默认</textarea> <br></td>
+            </tr>
+            <tr>
+                <td align="center"><input type="reset" value="重置"> </td>
+                <td align="center"><input type="submit" value="提交"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="这是一个按钮"></td>
+                <td><input type="file" value="这是提交文件"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="styleB/css.css" />
+<script type="text/javascript" src="../../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+
+	//加载
+	$(function () {
+
+		var deleteFun = function () {
+			//获取当前a标签的所在tr进行删除
+			var parent = $(this).parent().parent();
+
+			//需要再次确定要删除对象
+			var text = $(parent).find("td:first").text();
+
+			//使用弹出框confirm确定是否删除,会返回boolean值
+			if (confirm("是否删除"+ text +"?")){//需要再次确定要删除对象
+				//删除
+
+
+				//删除此jq对象
+				parent.remove();
+			}
+
+			//取消跳转到其他页面
+			return false;
+		}
+
+		//添加
+		$("#addEmpButton").click(function () {
+			//获取要添加的信息
+			var name = $("#empName").val();
+			var email = $("#email").val();
+			var salary = $("#salary").val();
+
+			//使用appendTo方法添加到table:employeeTable下最后一个
+
+			//添加的jq对象样式
+			var $1 = $("<tr>" +
+					"<td>" + name +"</td>" +
+					"<td>" + email +"</td>" +
+					"<td>" + salary +"</td>" +
+					"<td><a href=\"deleteEmp?id=001\">Delete</a></td>" +
+					"</tr>");
+
+			$($1).appendTo( $("#employeeTable"));
+
+			var find = $($1).parent().find("a");
+			//再次绑定新增的a标签
+			$(find).click(
+					deleteFun
+			)
+		})
+
+		//删除
+		//获取要删除的jq对象
+		$("a").click(
+				deleteFun
+		)
+
+
+
+	})
+
+	
+	
+</script>
+</head>
+<body>
+
+	<table id="employeeTable">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Salary</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td>Tom</td>
+			<td>tom@tom.com</td>
+			<td>5000</td>
+			<td><a href="deleteEmp?id=001">Delete</a></td>
+		</tr>
+		<tr>
+			<td>Jerry</td>
+			<td>jerry@sohu.com</td>
+			<td>8000</td>
+			<td><a href="deleteEmp?id=002">Delete</a></td>
+		</tr>
+		<tr>
+			<td>Bob</td>
+			<td>bob@tom.com</td>
+			<td>10000</td>
+			<td><a href="deleteEmp?id=003">Delete</a></td>
+		</tr>
+	</table>
+
+
+
+	<div id="formDiv">
+	
+		<h4>添加新员工</h4>
+
+		<table>
+			<tr>
+				<td class="word">name: </td>
+				<td class="inp">
+					<input type="text" name="empName" id="empName" />
+				</td>
+			</tr>
+			<tr>
+				<td class="word">email: </td>
+				<td class="inp">
+					<input type="text" name="email" id="email" />
+				</td>
+			</tr>
+			<tr>
+				<td class="word">salary: </td>
+				<td class="inp">
+					<input type="text" name="salary" id="salary" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<button id="addEmpButton" value="abc">
+						Submit
+					</button>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+</body>
+</html>

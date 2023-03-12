@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onchangeFun() {
+            alert("改变男神");
+        }
+
+        window.onload = function () {
+            var elementById = document.getElementById("sel02");
+            elementById.onchange = function () {
+                alert("女神改变了");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<select id="sel01" onchange="onchangeFun()">
+    <option>---男神---</option>
+    <option>胡歌</option>
+    <option>吴彦祖</option>
+    <option>陈冠希</option>
+</select>
+
+<select id="sel02">
+    <option>---女神---</option>
+    <option>刘亦菲</option>
+    <option>迪丽热巴</option>
+    <option>古力娜扎</option>
+</select>
+
+</body>
+</html>
